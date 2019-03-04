@@ -1,72 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<title>Happa Ceramics</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">  
+ <head>
+  <title>Happa Ceramics</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
     <!--Tab Icon--> 
-<link rel="icon" href="pics/logo.jpg" sizes="16x16 32x32" type="image/png">
+  <link rel="icon" href="pics/logo.jpg" sizes="16x16 32x32" type="image/png">
     <!--Font Awesome: for icons--> 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--Bootstrap CSS--> 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="style.css"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css"> 
     <!--Font Family CSS-->
-<link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Bungee+Hairline|Bungee+Shade|Codystar|Fredericka+the+Great|Geo|Gruppo|Libre+Barcode+39+Extended+Text|Libre+Barcode+39+Text|Marvel|Monofett|Pavanam|Raleway+Dots|Six+Caps|Text+Me+One|Unica+One|VT323" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Bungee+Hairline|Bungee+Shade|Codystar|Fredericka+the+Great|Geo|Gruppo|Libre+Barcode+39+Extended+Text|Libre+Barcode+39+Text|Marvel|Monofett|Pavanam|Raleway+Dots|Six+Caps|Text+Me+One|Unica+One|VT323" rel="stylesheet">
     <!--Java Script JS-->    
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 
     
-<body>   
+<body> 
+    
 <!--NAVIGATION MENU-->
 <nav class="navbar sticky-top bg-whitesmoke"><!--navbar-expand-xs-->
-<a class="mx-auto link-no-deco align-center" href="index.html" ><h2 class="text-me-one">HAPPA CERAMICS</h2></a><!-- buvo: navbar-brand-->
- 
+ <a class="mx-auto link-no-deco align-center" href="index.html" ><h2 class="text-me-one">HAPPA CERAMICS</h2></a><!-- buvo: navbar-brand-->
     
     <!--SHOPPING CART BUTTON-->
 <button id="shoppingCartButton" type="button">
-    <a href="cart.html" class="link-no-deco">
-<i class="fa fa-shopping-bag">
-<p id="count-cart" class="text-me-one"><!--...--></p>
-</i>  
-</a>  
-</button> 
+ <a href="cart.html" class="link-no-deco">
+  <i class="fa fa-shopping-bag">
+   <p id="count-cart" class="text-me-one"><!--...--></p>
+  </i>  
+ </a>  
+</button>
 
-    
     <!--MENU BUTTON-->
 <button id="menuButton" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#happa-menu-button" aria-controls="happa-menu-button" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="button-bar"></span><br>
-    <span class="button-bar"></span><br>
-    <span class="button-bar"></span>  
+ <span class="button-bar"></span><br>
+ <span class="button-bar"></span><br>
+ <span class="button-bar"></span>  
 </button> 
     <!--MENU LIST-->
 <div class="collapse navbar-collapse" id="happa-menu-button">
-<ul class="happa-menu-bruksnys nav nav-menu align-center text-me-one  justify-content-center flex-column">          
-    <div class="row"> 
-<a class="col-sm-3 nav-menu-item menu-item-1 dropdown-toggle link-no-deco" data-toggle="dropdown" href="shop.html">SHOP</a>
-            <!--DROPDOWN-->
-    <div class="dropdown-menu sticky-bottom happa-dropdown" aria-labelledby="navbarDropdown">
-    <a class="dropdown-item link-no-deco text-me-one happa-dropdown-item" href="shop.html">ALL PRODUCTS</a><hr>
-    <a class="dropdown-item link-no-deco text-me-one happa-dropdown-item" href="shop.html" style="font-size: 14px">SOAP HOLDERS</a>
-    <a class="dropdown-item link-no-deco text-me-one happa-dropdown-item" href="shop.html#shop-bowls" style="font-size: 14px">BOWLS</a>
-    <a class="dropdown-item link-no-deco text-me-one happa-dropdown-item"href="shop.html#shop-cups" style="font-size: 14px">CUPS</a>
-    </div>    
-<a class="col-sm-3 nav-menu-item menu-item-2 link-no-deco" href="index.html#happa-about">ABOUT</a>
-<a class="col-sm-3 nav-menu-item menu-item-3 link-no-deco" href="index.html#happa-contacts">CONTACT</a>   
-<a class="col-sm-3 nav-menu-item menu-item-4 link-no-deco" href="cart.html">BAG&nbsp;<p style="display:inline" id="count-cart2" class="text-me-one"><!--...--></p></a>
-    </div>
-</ul> 
- </div>   
-    </nav>    
-
-    
+ <ul class="happa-menu-bruksnys nav nav-menu align-center text-me-one  justify-content-center flex-column">          
+  <div class="row"> 
+   <a class="col-sm-3 nav-menu-item menu-item-1 dropdown-toggle link-no-deco" data-toggle="dropdown" href="shop.html">SHOP</a>
+     <!--DROPDOWN-->
+  <div class="dropdown-menu sticky-bottom happa-dropdown" aria-labelledby="navbarDropdown">
+   <a class="dropdown-item link-no-deco text-me-one happa-dropdown-item" href="shop.html">ALL PRODUCTS</a><hr>
+   <a class="dropdown-item link-no-deco text-me-one happa-dropdown-item" href="shop.html" style="font-size: 14px">SOAP HOLDERS</a>
+   <a class="dropdown-item link-no-deco text-me-one happa-dropdown-item" href="shop.html#shop-bowls" style="font-size: 14px">BOWLS</a>
+   <a class="dropdown-item link-no-deco text-me-one happa-dropdown-item"href="shop.html#shop-cups" style="font-size: 14px">CUPS</a>
+  </div>    
+   <a class="col-sm-3 nav-menu-item menu-item-2 link-no-deco" href="index.html#happa-about">ABOUT</a>
+   <a class="col-sm-3 nav-menu-item menu-item-3 link-no-deco" href="index.html#happa-contacts">CONTACT</a>   
+   <a class="col-sm-3 nav-menu-item menu-item-4 link-no-deco" href="cart.html">BAG&nbsp;<p style="display:inline" id="count-cart2" class="text-me-one"><!--...--></p></a>
+  </div>
+ </ul> 
+  </div>   
+    </nav> 
     
     
 <div class="container"><br><!--CONTENT container OPENS--> 
-    
     
 <!--MESSAGE: CART IS EMPTY (kad istrintu div esanti texta)--> 
 <div id="emptyCartMessage"> 
@@ -75,15 +71,15 @@
         
 <!---- CART TABLE opens -->
 <table class="table marvel all-caps" style="border: 1px solid lightgrey;">
-<thead>
-    <tr style="background-color: whitesmoke;">
+ <thead>
+   <tr style="background-color: whitesmoke;">
         <th class="c1 d-none d-sm-block">Product</th>
         <th class="c2">Description</th>
         <th >Price</th>
         <th >Qty</th>
         <th >Total</th>
-    </tr>
-</thead>        
+   </tr>
+ </thead>        
 <tbody id="show-cart">
         <!-- ... -->
 </tbody>
@@ -107,7 +103,7 @@
     
 <!------ items list -->  
 <h5 class="marvel all-caps text-danger"><b>TEST.</b> Add Item to Bag from this list:</h5>
-<ul class="marvel all-caps">
+ <ul class="marvel all-caps">
     <li><a class="add-to-cart link-no-deco" href="item.html" 
         data-img="pics/bowlWhite.jpg" 
         data-name="White Bowl" 
@@ -124,7 +120,7 @@
         data-img="pics/cupBlue.jpg" 
         data-name="Blue Coffee Cup" 
         data-price="10.99">Blue Coffee Cup</a></li>
-</ul><br><hr>
+ </ul><br><hr>
         
     
 <!------- CONTINUE SHOPPING opens --> 
@@ -194,8 +190,6 @@
 <p class="text-me-one">Copyright &copy; 2018, Happa Ceramics</p><br>            
 </div><!--CONTENT container closes-->  
     
-
-    
 <style>
 .remove-btn{
     border:none;
@@ -263,7 +257,6 @@
         $("#count-cart").html( happaCart.countCart() );
         $("#total-cart").html( happaCart.totalCart() );
         $("#count-cart2").html( happaCart.countCart() );  //parasyt funkcija, kad nerodytu 0
-
     }
     
     $("#show-cart").on("click", ".remove-btn", function(event){
@@ -291,17 +284,12 @@
         happaCart.setCountForItem(name, count);
         displayCart();
     });
-    
-    
-  
+ 
 
-    
-// MANO Funkcijos    
 $(document).ready(function(){
     $("html").load(yourCartIsEmptyMessage());
 });
      
-
 yourCartIsEmptyMessage = function (){
     var output;
     if (happaCart.cart == "undefined" || 
@@ -311,7 +299,6 @@ yourCartIsEmptyMessage = function (){
             }
         $("#emptyCartMessage").html(output);       
 };    
-
 
 </script><!----------script closes------------> 
     
