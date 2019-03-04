@@ -35,12 +35,12 @@
     <span class="button-bar"></span>  
 </button> 
     
-    <!--MENU LIST-->
+<!--MENU LIST-->
 <div class="collapse navbar-collapse" id="happa-menu-button">
 <ul class="happa-menu-bruksnys nav nav-menu align-center text-me-one  justify-content-center flex-column">          
     <div class="row"> 
 <a class="col-sm-3 nav-menu-item menu-item-1 dropdown-toggle link-no-deco" data-toggle="dropdown" href="shop.html">SHOP</a>
-            <!--DROPDOWN-->
+    <!--DROPDOWN-->
     <div class="dropdown-menu sticky-bottom happa-dropdown" aria-labelledby="navbarDropdown">
     <a class="dropdown-item link-no-deco text-me-one happa-dropdown-item" href="shop.html">ALL PRODUCTS</a><hr>
     <a class="dropdown-item link-no-deco text-me-one happa-dropdown-item" href="shop.html" style="font-size: 14px">SOAP HOLDERS</a>
@@ -59,13 +59,14 @@
         <br><br><br>
 <!------------------------------------------------------------------>    
 
-<div class="container"><!--CONTENT container opens-->  
+<!--CONTENT container opens-->
+<div class="container">  
   
-<div class="row no-gutter"><!--1 ADDRESS, 2 PAYMENT, 3 CART forms opens-->
+<!--1 ADDRESS, 2 PAYMENT, 3 CART forms opens-->
+<div class="row no-gutter">
 
-      
-      
-      <!------    1 ADDRESS opens -->   
+            
+<!--1 ADDRESS opens-->   
 <div class="shipping-block marvel    col-12   col-sm-6    col-lg-4">
 
 <form name="form1" id="form1" action="action-page.php" method="post"
@@ -108,7 +109,7 @@
 <input type="submit" value="Submit" method="post" class="button-happa link-no-deco float-right">
     
 </form>
-</div><br><br><!--- ADDRESS closes -->   
+</div><br><br><!--ADDRESS closes-->   
 
 
       
@@ -118,7 +119,7 @@
     email           - Not a valid e-mail
     address
     city
-    stateSelect      - please select
+    stateSelect      -please select
     zip
     country
     sameAddress  */    
@@ -204,7 +205,7 @@ function addressSubmit() {
       
       
            
-    <!------    2   PAYMENT opens -->
+<!--2 PAYMENT opens-->
 <div class="payment-block marvel    col-12  col-sm-6  col-lg-4">
  <form name="forma2" id="form2" action="action-page.php" method="post" 
        onsubmit="return paymentSubmit()">    
@@ -244,17 +245,17 @@ function addressSubmit() {
 <input type="submit" value="Submit" method="post" class="button-happa link-no-deco float-right">
      
 </form>           
-</div><br><br> <!---- PAYMENT closes -->        
+</div><br><br> <!--PAYMENT closes-->        
     
 <style>
 /*CHECK OUT*/
 input[type=text], select {
     width: 100%;
-    margin-bottom: 15px;
-    padding: 6px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    line-height: 16px;
+    margin-bottom: 15 px;
+    padding: 6 px;
+    border: 1 px solid #ccc;
+    border-radius: 3 px;
+    line-height: 16 px;
     border: 1px solid lightgrey;
     background-color: white;}
 </style>  
@@ -344,7 +345,7 @@ function paymentSubmit() {
   
       
       
-    <!------   3    Cart opens -->  
+  <!--3 CART opens-->  
 <div class="cart-block marvel
             offset-1 col-10 offset-1
             offset-sm-2 col-sm-8 offset-sm-2
@@ -369,19 +370,19 @@ function paymentSubmit() {
     <hr>
 <h4 class="float-left">Total:</h4> 
 <h4 class="float-right">$  <!----> <span id="grand-total-cart"></span></h4>    
-</div><br><br><br><!------ Cart closes -->   
+</div><br><br><br><!--CART closes-->   
       
 
 </div><br><!--ADDRESS, PAYMENT, CART forms closes-->
    
 
-<div class="row no-gutter"><!----BACK, SUBMIT buttons row opens-->
+<div class="row no-gutter"><!--BACK, SUBMIT buttons row opens-->
     <div class="col-12 col-lg-8"> 
         <p class="marvel">Go Back To Cart</p>
         <a href="cart.html" class="button-happa link-no-deco float-left">Back</a> 
         <button class="button-happa float-right" onclick="submitAll();">SUBMIT ALL (neveikia)</button>
     </div>
-</div><br><hr><!----BACK, SUBMIT buttons row closes--> 
+</div><br><hr><!--BACK, SUBMIT buttons row closes--> 
     
 <p class="text-me-one">Copyright &copy; 2018, Happa Ceramics</p><br> 
 </div><!--CONTENT container closes-->    
@@ -435,7 +436,7 @@ $(document).ready(function () {
 
               
    
-<!----------script opens------------>      
+<!--SCRIPT opens-->      
 <script type="text/javascript" src="cart-functions.js"></script>    
 <script>   //dont export: 1.jquery(dependency)  2.page-atrr-related code    
 
@@ -548,7 +549,7 @@ $("#show-cart").on("change", ".item-input", function(event){
     displayCart();
 });
     
-</script><!----------script closes------------>     
+</script><!--SCRIPT closes-->     
     
 
 </body>
