@@ -3,9 +3,7 @@
 Description: Happa Ceramics shopping website;
 
 Year: 2018;
-
 Author: Ieva Paulauskaite;
-
 
 works well on Google Chrome Browser; 
 doesn't work on htmlpreview.github.io; 
