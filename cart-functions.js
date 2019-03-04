@@ -8,7 +8,7 @@ happaCart.Item = function (img, name, price, count) {   // define item ARRAY to 
     this.img = img
     this.name = name;
     this.price = price;    // define an object to represent cart item
-    this.count = count;    // count = count ?? pas maikla taip maciau
+    this.count = count;    
 };
 
 happaCart.addItemToCart = function (img, name, price, count) {
@@ -22,7 +22,7 @@ happaCart.addItemToCart = function (img, name, price, count) {
     var item = new this.Item(img, name, price, count);
     this.cart.push(item);
     this.saveCart();
-    location.reload();  //darasiau kad atnaujintu: YOUR CART IS EMPTY 
+    location.reload();  //atnaujina cart: YOUR CART IS EMPTY 
 };
 
 happaCart.setCountForItem = function(name, count) {
@@ -55,14 +55,14 @@ happaCart.removeItemFromCartAll = function(name) {
             break;
         }
     }
-    this.saveCart();    //pati darasiau
-    location.reload();  //darasiau kad atnaujintu: YOUR CART IS EMPTY 
+    this.saveCart();    
+    location.reload();  //atnaujina: YOUR CART IS EMPTY 
 };
 
 happaCart.clearCart = function () {
     this.cart = []; 
     this.saveCart();  
-    location.reload();  //darasiau kad atnaujintu: YOUR CART IS EMPTY 
+    location.reload();  //atnaujina: YOUR CART IS EMPTY 
 
 }
 
@@ -108,14 +108,6 @@ happaCart.loadCart();
 
 
 // ************************************************* 
-    //MANO PARASYTOS FJOS:
-
-
-
-
-
-
-
 
 
 
