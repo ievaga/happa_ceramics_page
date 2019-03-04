@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Happa Ceramics</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Tab Icon--> 
+<link rel="icon" href="pics/logo.jpg" sizes="16x16 32x32" type="image/png">
+    <!--Font Awesome: for icons--> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+    <!--Bootstrap CSS--> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css"> 
+    <!--Font Family CSS-->
+<link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Bungee+Hairline|Bungee+Shade|Codystar|Fredericka+the+Great|Geo|Gruppo|Libre+Barcode+39+Extended+Text|Libre+Barcode+39+Text|Marvel|Monofett|Pavanam|Raleway+Dots|Six+Caps|Text+Me+One|Unica+One|VT323" rel="stylesheet">
+    <!--Java Script JS-->    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+  
+    
+<body>
+    <script>
+
+    </script>
+    
+<!--NAVIGATION MENU-->
+<nav class="navbar sticky-top bg-whitesmoke"><!--navbar-expand-xs-->
+    
+<a class="mx-auto link-no-deco align-center" href="index.html" ><h2 class="text-me-one">HAPPA CERAMICS</h2></a><!-- buvo: navbar-brand-->
+<button id="menuButton" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#happa-menu-button" aria-controls="happa-menu-button" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="button-bar"></span><br>
+    <span class="button-bar"></span><br>
+    <span class="button-bar"></span>  
+</button> 
+    
+    <!--MENU LIST-->
+<div class="collapse navbar-collapse" id="happa-menu-button">
+<ul class="happa-menu-bruksnys nav nav-menu align-center text-me-one  justify-content-center flex-column">          
+    <div class="row"> 
+<a class="col-sm-3 nav-menu-item menu-item-1 dropdown-toggle link-no-deco" data-toggle="dropdown" href="shop.html">SHOP</a>
+            <!--DROPDOWN-->
+    <div class="dropdown-menu sticky-bottom happa-dropdown" aria-labelledby="navbarDropdown">
+    <a class="dropdown-item link-no-deco text-me-one happa-dropdown-item" href="shop.html">ALL PRODUCTS</a><hr>
+    <a class="dropdown-item link-no-deco text-me-one happa-dropdown-item" href="shop.html" style="font-size: 14px">SOAP HOLDERS</a>
+    <a class="dropdown-item link-no-deco text-me-one happa-dropdown-item" href="shop.html#shop-bowls" style="font-size: 14px">BOWLS</a>
+    <a class="dropdown-item link-no-deco text-me-one happa-dropdown-item" href="shop.html#shop-cups" style="font-size: 14px">CUPS</a>
+    </div>    
+<a class="col-sm-3 nav-menu-item menu-item-2 link-no-deco" href="index.html#happa-about">ABOUT</a>
+<a class="col-sm-3 nav-menu-item menu-item-3 link-no-deco" href="index.html#happa-contacts">CONTACT</a>   
+<a class="col-sm-3 nav-menu-item menu-item-4 link-no-deco" href="cart.html">BAG&nbsp;<p style="display:inline" id="count-cart2" class="text-me-one"><!--...--></p></a>
+    </div>
+</ul> 
+ </div>   
+</nav>
+
+<!------------------------------------------------------------------>
+        <br><br><br>
+<!------------------------------------------------------------------>    
+
+<div class="container"><!--CONTENT container opens-->  
+  
+<div class="row no-gutter"><!--1 ADDRESS, 2 PAYMENT, 3 CART forms opens-->
+
+      
+      
+      <!------    1 ADDRESS opens -->   
+<div class="shipping-block marvel    col-12   col-sm-6    col-lg-4">
+
+<form name="form1" id="form1" action="action-page.php" method="post"
+       onsubmit="return addressSubmit()">
+        
+<!--all names here are UNNAMED # !-->        
+<h4 class="galva">Billing Address</h4><br><br>
+  <label for="fullName">Full Name</label>
+    <input type="text" id="fullName" name="fullName">
+  <label for="email">Email</label>
+    <input type="text" id="email" name="email">
+  <label for="address">Address</label>
+    <input type="text" id="address" name="address">
+  <label for="city">City</label>
+    <input type="text" id="city" name="city">
+<div class="row">
+<div class="col-sm-6">
+  <label for="stateSelect">State</label>
+<select required class="custom-select" id="stateSelect">
+<option class="" selected>Choose...</option>
+<option value="pennsylvania">PA</option>
+<option value="new york">NY</option>
+<option value="new jersey">NJ</option>
+<option value="delaware">DE</option>
+<option value="merylan">MD</option>
+<option value="west virginia">WV</option>
+</select>
+</div>
+
+<div class="col-sm-6">
+    <label for="zip">Zip</label>
+      <input type="text" id="zip" name="zip">
+</div>     
+</div>
+    <label for="country">Country</label>
+      <input type="text" id="country" name="country">
+   <label>
+     <input type="checkbox" checked="checked" id="sameAddress" name="sameAddress"> Shipping address same as billing</label>
+    
+<input type="submit" value="Submit" method="post" class="button-happa link-no-deco float-right">
+    
+</form>
+</div><br><br><!--- ADDRESS closes -->   
+
+
+      
+<script>
+/*LIST OF Id:
+    fullName
+    email           - Not a valid e-mail
+    address
+    city
+    stateSelect      - please select
+    zip
+    country
+    sameAddress  */    
+    
+// get by Id:
+function addressSubmit() {
+    var fullName = document.getElementById("fullName").value;
+    var at = document.getElementById("email").value.indexOf("@");
+    var address = document.getElementById("address").value;
+    var city = document.getElementById("city").value;
+    var stateSelect = document.getElementById("stateSelect").value;
+    var zip = document.getElementById("zip").value;
+    var country = document.getElementById("country").value;
+    var sameAddress = document.getElementById("sameAddress").value;
+    submitOK = "true";
+    
+    // fullName
+    if (fullName == "") {
+        alert("Please enter your name.");
+        submitOK = "false";
+        document.getElementById('fullName').style.borderColor = "red";
+        return false;
+    }
+    if(fullName.length <= 2){
+        alert('Your Name is To Short');
+        submitOK = "false";
+        document.getElementById('fullName').style.borderColor = "red";
+        return false;
+    } else{
+        document.getElementById('fullName').style.borderColor = "green";
+    } 
+    
+    // email. kai indexOf("@")= -1 (pozicija), vadinas nera @ 
+    if (at == -1) {
+        alert("Not a valid e-mail!");
+        submitOK = "false";
+        document.getElementById('email').style.borderColor = "red";
+        return false;
+    } else{
+        document.getElementById('email').style.borderColor = "green";
+    } 
+    // address      
+    if(address == "") {
+        submitOK = "false";
+        document.getElementById('address').style.borderColor = "red";
+        return false;
+    } else{
+        document.getElementById('address').style.borderColor = "green";
+    }       
+    // city      
+    if(city == "") {
+        submitOK = "false";
+        document.getElementById('city').style.borderColor = "red";
+        return false;
+    } else{
+        document.getElementById('city').style.borderColor = "green";
+    }      
+    // zip      
+    if(isNaN(zip) || zip.length !== 5) { 
+        alert("Zip code must contain 5 digits!");
+        submitOK = "false";
+        document.getElementById('zip').style.borderColor = "red";
+        return false;
+    } else{
+        document.getElementById('zip').style.borderColor = "green";
+    }     
+    // country      
+    if(country == "") { 
+        alert("Please enter your country!");
+        submitOK = "false";
+        document.getElementById('country').style.borderColor = "red";
+        return false;
+    } else{
+        document.getElementById('country').style.borderColor = "green";
+    }  
+    if (submitOK == "false") {
+        return false;
+    }
+ //       return true;   //patarimas: add ‘return true’ if the users input passes validation.
+
+}
+</script>      
+      
+      
+           
+    <!------    2   PAYMENT opens -->
+<div class="payment-block marvel    col-12  col-sm-6  col-lg-4">
+ <form name="forma2" id="form2" action="action-page.php" method="post" 
+       onsubmit="return paymentSubmit()">    
+     
+<h4 class="galva">Payment</h4><br><br>
+<div class="mokejimo-budas">
+    <label><input type="radio" name="korteles-tipas" checked="checked">&nbsp;Credit Card</label><br>
+    <label><input type="radio" name="korteles-tipas">&nbsp;Debit Card</label><br>
+    <label><input type="radio" name="korteles-tipas">&nbsp;Pay Pal</label><br>
+</div><br>
+<div>
+  <label for="#" class="float-left">Accepted Cards</label>
+    <div class="icon-container float-right">
+    <i class="fa fa-cc-visa"></i>
+    <i class="fa fa-cc-amex"></i>
+    <i class="fa fa-cc-mastercard"></i>
+    <i class="fa fa-cc-discover" style="color:black;"></i>
+    </div>
+</div><br><br>
+    <label for="nameOnCard">Name on Card</label>
+      <input type="text" id="nameOnCard" name="nameOnCard">
+    <label for="cardNumber">Credit card number</label>
+      <input type="text" id="cardNumber" name="cardNumber">
+    <label for="expMonth">Exp Month</label>
+      <input type="text" id="expMonth" name="#">
+<div class="row">
+  <div class="col-sm-6">
+    <label for="expYear">Exp Year</label>
+      <input type="text" id="expYear" name="#">
+  </div>
+  <div class="col-sm-6">
+    <label for="cvv">CVV</label>
+    <input type="text" id="cvv" name="cvv">
+  </div>
+</div>    
+       
+<input type="submit" value="Submit" method="post" class="button-happa link-no-deco float-right">
+     
+</form>           
+</div><br><br> <!---- PAYMENT closes -->        
+    
+<style>
+/*CHECK OUT*/
+input[type=text], select {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    line-height: 16px;
+    border: 1px solid lightgrey;
+    background-color: white;}
+</style>  
+      
+ 
+<script>
+/*LIST OF Id:
+    nameOnCard
+    cardNumber
+    expMonth
+    expYear
+    ccV        */
+    
+function paymentSubmit() {
+    // get by Id:
+    var nameOnCard = document.getElementById("nameOnCard").value;
+    var cardNumber = document.getElementById("cardNumber").value;
+    var expMonth = document.getElementById("expMonth").value;
+    var expYear = document.getElementById("expYear").value;
+    var cvv = document.getElementById("cvv").value;
+    submitOK = "true";
+    
+    // nameOnCard
+    if (nameOnCard == "") {
+        alert("Please enter your name.");
+        submitOK = "false";
+        document.getElementById('nameOnCard').style.borderColor = "red";
+        return false;
+    }
+    if(nameOnCard.length <= 2){
+        alert('Your Name is To Short');
+        submitOK = "false";
+        document.getElementById('nameOnCard').style.borderColor = "red";
+        return false;
+    } else{
+        document.getElementById('nameOnCard').style.borderColor = "green";
+    }
+    // cardNumber      
+    if(isNaN(cardNumber) || cardNumber.length !== 16) { 
+        alert("Credit card number must contain 16 digits!");
+        submitOK = "false";
+        document.getElementById('cardNumber').style.borderColor = "red";
+        return false;
+    } else{
+        document.getElementById('cardNumber').style.borderColor = "green";
+    }
+    // expMonth      
+    if (isNaN(expMonth) || expMonth < 1 || expMonth > 12) {
+        alert("The expiration month is incorrect.");
+        submitOK = "false";
+        document.getElementById('expMonth').style.borderColor = "red";
+        return false;
+    } else{
+        document.getElementById('expMonth').style.borderColor = "green";
+    }     
+    // expYear     
+    if (isNaN(expYear) || expYear < 2018 || expYear > 2029) {
+        alert("The expiration year is incorrect.");
+        submitOK = "false";
+        document.getElementById('expYear').style.borderColor = "red";
+        return false;
+    } else{
+        document.getElementById('expYear').style.borderColor = "green";
+    }    
+    // cvv     
+    if (isNaN(cvv) || cvv.length !== 3) {
+        alert("CVV must contain 3 digits!");
+        submitOK = "false";
+        document.getElementById('cvv').style.borderColor = "red";
+        return false;
+    } else{
+        document.getElementById('cvv').style.borderColor = "green";
+    }      
+    if (submitOK == "false") {
+        return false;
+    }
+ //       return true;   patarimas: add ‘return true’ if the users input passes validation.
+} 
+    
+/*    if (fname.length > 10) {
+        alert("The name may have no more than 10 characters");
+        submitOK = "false";}   */
+</script>      
+      
+
+      
+  
+      
+      
+    <!------   3    Cart opens -->  
+<div class="cart-block marvel
+            offset-1 col-10 offset-1
+            offset-sm-2 col-sm-8 offset-sm-2
+            col-lg-3 offset-lg-1
+            order-first order-lg-last">
+<a href="cart.html" class="link-no-deco"><h4 class="galva">Shopping Bag</h4></a><br><br>  
+    <table class="table" >
+        <tbody id="show-cart">
+            <!--...-->
+        </tbody>
+        <tbody id="show-tax">
+            <!--...-->
+        </tbody>
+    <tbody>
+      <tr>
+        <td>Shipping Cost</td>
+        <td></td>
+        <td>4.00</td>
+      </tr>
+    </tbody>
+  </table>
+    <hr>
+<h4 class="float-left">Total:</h4> 
+<h4 class="float-right">$  <!----> <span id="grand-total-cart"></span></h4>    
+</div><br><br><br><!------ Cart closes -->   
+      
+
+</div><br><!--ADDRESS, PAYMENT, CART forms closes-->
+   
+
+<div class="row no-gutter"><!----BACK, SUBMIT buttons row opens-->
+    <div class="col-12 col-lg-8"> 
+        <p class="marvel">Go Back To Cart</p>
+        <a href="cart.html" class="button-happa link-no-deco float-left">Back</a> 
+        <button class="button-happa float-right" onclick="submitAll();">SUBMIT ALL (neveikia)</button>
+    </div>
+</div><br><hr><!----BACK, SUBMIT buttons row closes--> 
+    
+<p class="text-me-one">Copyright &copy; 2018, Happa Ceramics</p><br> 
+</div><!--CONTENT container closes-->    
+    
+    
+<!------------------------------------------------------------------>  
+<script>//SUBMIT ALL BUTTON
+'use strict';
+//https://www.w3schools.com/js/js_validation.asp
+    
+function validate(form){
+    // ? addressSubmit();
+    //forms processsing goes here...
+    console.log(form, form.name)
+    return false;
+}
+
+function submitAll(){
+    for(var i=0, n=document.forms.length; i<n; i++){
+        document.forms[i].submit();
+    }
+}
+</script>    
+<!------------------------------------------------------------------>
+    
+    
+
+<!------------------------------------------------------------------>
+<!--SUBMITS TWO FORMS AT THE SAME TIME: 
+id="form1"    id="form2"
+https://www.quora.com/How-can-I-submit-two-forms-with-one-button
+-->    
+      
+<!--<script>
+$(document).ready(function () {
+    $("#continueToCheckout").click(function() {
+        $("#form1").submit();
+        $("#form2").submit();
+    });
+});
+</script> -->  
+    
+<!---  <input id="continueToCheckout" type="submit" value="Continue to checkout" class="button-happa float-right">
+    -->    
+<!------------------------------------------------------------------>        
+    
+
+    
+  
+    
+
+              
+   
+<!----------script opens------------>      
+<script type="text/javascript" src="cart-functions.js"></script>    
+<script>   //dont export: 1.jquery(dependency)  2.page-atrr-related code    
+
+    
+/**********  NAVIGATION MENU BUTTON - TOGGLE **************/
+$(document).ready(function () {
+    $(document).click(function (event) {
+        var clickover = $(event.target);
+        var _opened = $(".navbar-collapse").hasClass("show");
+        if (_opened === true && !clickover.hasClass("navbar-toggler")) {
+            $(".navbar-toggler").click();
+        }
+    });
+});    
+         
+/**********CART FUNCTIONS AND JQUERY  ***************/
+displayCart();  //PRIDEJAU, nes kai: refresh -> nerodo cart
+displayCart2(); 
+    
+$(".add-to-cart").click(function(){
+    event.preventDefault();
+    var name = $(this).attr("data-name");
+    var img = $(this).attr("data-img");
+    var price = Number($(this).attr("data-price")); // ! not a STRING
+    happaCart.addItemToCart(img, name, price, 1);
+    displayCart();
+});
+
+$("#clear-cart").click(function(event){
+    happaCart.clearCart();
+    displayCart();
+});                 
+
+        
+/********************************************/    
+//mano:
+//grand total: cart + Tax + Shippig
+function grandTotalCart(){
+    var grandTotal;
+    var totalCart = Number(happaCart.totalCart());
+    var tax = Number(TAX());
+    grandTotal = totalCart + 4 + tax;
+    return grandTotal.toFixed(2);
+}
+   
+//TAX
+function TAX(){
+    var tax = 0;
+    var totalCart = Number(happaCart.totalCart());
+    tax = totalCart * 5 / 100;
+    return tax.toFixed(2);
+}
+
+function displayCart2(){
+    var output = "";
+        output +=  
+            + "<tr>"  
+            + "<th>" + "TAX" + "</th>"
+            + "<th>" + "" + "</th>"
+            + "<th>" + TAX() + "</th>"
+            + "</tr>"
+    $("#show-tax").html(output);
+}       
+/********************************************/ 
+    
+    
+    
+function displayCart(){
+    var cartArray = happaCart.listCart();
+    var output = "";
+    for (var i in cartArray) {
+        output += "<tr>"  
+            + "<th>" + cartArray[i].name + "</th>" 
+            + "<th>" + cartArray[i].count + "</th>"
+            + "<th>" + cartArray[i].price + "</th>"
+            + "</tr>"
+    }
+    $("#show-cart").html(output);
+    $("#count-cart").html( happaCart.countCart() );
+    $("#grand-total-cart").html( grandTotalCart() );
+   // $("#grand-total-cart").html( happaCart.grandTotalCart() );   //grandTotal
+    $("#count-cart2").html( happaCart.countCart() );  //parasyt funkcija, kad nerodytu 0
+}
+               
+                    
+    
+$("#show-cart").on("click", ".remove-btn", function(event){
+    var name = $(this).attr("data-name");
+    happaCart.removeItemFromCartAll(name);
+    displayCart();
+});
+
+$("#show-cart").on("click", ".subtract-btn", function(event){
+    var name = $(this).attr("data-name");
+    happaCart.removeItemFromCart(name);
+    displayCart();
+});
+
+$("#show-cart").on("click", ".add-btn", function(event){
+    var name = $(this).attr("data-name");
+    var img = $(this).attr("data-img");        //PRIDEJAU
+    happaCart.addItemToCart(img, name, 0, 1);
+    displayCart();
+});    
+
+$("#show-cart").on("change", ".item-input", function(event){
+    var name = $(this).attr("data-name");
+    var count = Number($(this).val());    // ! not a STRING
+    happaCart.setCountForItem(name, count);
+    displayCart();
+});
+    
+</script><!----------script closes------------>     
+    
+
+</body>
+</html>

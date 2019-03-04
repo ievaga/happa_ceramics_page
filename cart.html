@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Happa Ceramics</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+    <!--Tab Icon--> 
+<link rel="icon" href="pics/logo.jpg" sizes="16x16 32x32" type="image/png">
+    <!--Font Awesome: for icons--> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Bootstrap CSS--> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css"> 
+    <!--Font Family CSS-->
+<link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Bungee+Hairline|Bungee+Shade|Codystar|Fredericka+the+Great|Geo|Gruppo|Libre+Barcode+39+Extended+Text|Libre+Barcode+39+Text|Marvel|Monofett|Pavanam|Raleway+Dots|Six+Caps|Text+Me+One|Unica+One|VT323" rel="stylesheet">
+    <!--Java Script JS-->    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+    
+<body>   
+<!--NAVIGATION MENU-->
+<nav class="navbar sticky-top bg-whitesmoke"><!--navbar-expand-xs-->
+<a class="mx-auto link-no-deco align-center" href="index.html" ><h2 class="text-me-one">HAPPA CERAMICS</h2></a><!-- buvo: navbar-brand-->
+ 
+    
+    <!--SHOPPING CART BUTTON-->
+<button id="shoppingCartButton" type="button">
+    <a href="cart.html" class="link-no-deco">
+<i class="fa fa-shopping-bag">
+<p id="count-cart" class="text-me-one"><!--...--></p>
+</i>  
+</a>  
+</button> 
+
+    
+    <!--MENU BUTTON-->
+<button id="menuButton" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#happa-menu-button" aria-controls="happa-menu-button" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="button-bar"></span><br>
+    <span class="button-bar"></span><br>
+    <span class="button-bar"></span>  
+</button> 
+    <!--MENU LIST-->
+<div class="collapse navbar-collapse" id="happa-menu-button">
+<ul class="happa-menu-bruksnys nav nav-menu align-center text-me-one  justify-content-center flex-column">          
+    <div class="row"> 
+<a class="col-sm-3 nav-menu-item menu-item-1 dropdown-toggle link-no-deco" data-toggle="dropdown" href="shop.html">SHOP</a>
+            <!--DROPDOWN-->
+    <div class="dropdown-menu sticky-bottom happa-dropdown" aria-labelledby="navbarDropdown">
+    <a class="dropdown-item link-no-deco text-me-one happa-dropdown-item" href="shop.html">ALL PRODUCTS</a><hr>
+    <a class="dropdown-item link-no-deco text-me-one happa-dropdown-item" href="shop.html" style="font-size: 14px">SOAP HOLDERS</a>
+    <a class="dropdown-item link-no-deco text-me-one happa-dropdown-item" href="shop.html#shop-bowls" style="font-size: 14px">BOWLS</a>
+    <a class="dropdown-item link-no-deco text-me-one happa-dropdown-item"href="shop.html#shop-cups" style="font-size: 14px">CUPS</a>
+    </div>    
+<a class="col-sm-3 nav-menu-item menu-item-2 link-no-deco" href="index.html#happa-about">ABOUT</a>
+<a class="col-sm-3 nav-menu-item menu-item-3 link-no-deco" href="index.html#happa-contacts">CONTACT</a>   
+<a class="col-sm-3 nav-menu-item menu-item-4 link-no-deco" href="cart.html">BAG&nbsp;<p style="display:inline" id="count-cart2" class="text-me-one"><!--...--></p></a>
+    </div>
+</ul> 
+ </div>   
+    </nav>    
+
+    
+    
+    
+<div class="container"><br><!--CONTENT container OPENS--> 
+    
+    
+<!--MESSAGE: CART IS EMPTY (kad istrintu div esanti texta)--> 
+<div id="emptyCartMessage"> 
+    
+<h4 class="marvel">SHOPPING BAG</h4><br>   
+        
+<!---- CART TABLE opens -->
+<table class="table marvel all-caps" style="border: 1px solid lightgrey;">
+<thead>
+    <tr style="background-color: whitesmoke;">
+        <th class="c1 d-none d-sm-block">Product</th>
+        <th class="c2">Description</th>
+        <th >Price</th>
+        <th >Qty</th>
+        <th >Total</th>
+    </tr>
+</thead>        
+<tbody id="show-cart">
+        <!-- ... -->
+</tbody>
+</table><br><br><!----CART TABLE closes --> 
+             
+  
+<div class="cart-text marvel all-caps">
+<h4 class="cart-text float-right">Total:&nbsp;&nbsp; $<span id="total-cart"></span></h4>
+            <br><br>
+<button id="clear-cart" class="remove-btn float-right cart-text">CLEAR CART</button>
+            <br><br><br>
+<p class="float-right">Shipping &amp; taxes calculated at checkout</p>
+            <br><br>
+<a href="checkout.html" class="link-no-deco float-right button-happa">CHECK OUT</a>    
+</div>
+
+    
+</div><br><br><br><br><!--MESSAGE: CART IS EMPTY (kad istrintu div esanti texta) closes--> 
+    
+    
+    
+<!------ items list -->  
+<h5 class="marvel all-caps text-danger"><b>TEST.</b> Add Item to Bag from this list:</h5>
+<ul class="marvel all-caps">
+    <li><a class="add-to-cart link-no-deco" href="item.html" 
+        data-img="pics/bowlWhite.jpg" 
+        data-name="White Bowl" 
+        data-price="20.25">White Bowl</a></li>            
+    <li><a class="add-to-cart link-no-deco" href="#" 
+        data-img="pics/soapHolder2.jpg" 
+        data-name="Yellow Soap Holder" 
+        data-price="16.25">Yellow Soap Holder</a></li>
+    <li><a class="add-to-cart link-no-deco" href="#" 
+        data-img="pics/sages.jpg" 
+        data-name="Sage Gyvunelis" 
+        data-price="9.99">Sage Gyvunelis</a></li>            
+    <li><a class="add-to-cart link-no-deco" href="#" 
+        data-img="pics/cupBlue.jpg" 
+        data-name="Blue Coffee Cup" 
+        data-price="10.99">Blue Coffee Cup</a></li>
+</ul><br><hr>
+        
+    
+<!------- CONTINUE SHOPPING opens --> 
+<h3 class="float-left marvel">Continue Shopping</h3>
+<div id="carousel-check-out">
+    <a href="item.html" class="slide-random">
+        <img style="height:150px;" src="pics/bowls.jpg" alt="Happa Ceramics">
+    </a>
+    <a href="item.html" class="slide-random">
+        <img style="height:150px;" src="pics/soapHolder4.jpg" alt="Happa Ceramics">
+    </a>
+    <a href="item.html" class="slide-random">
+        <img style="height:150px;" src="pics/cupPink.jpg" alt="Happa Ceramics">
+    </a>    
+    <a href="item.html" class="slide-random">
+        <img style="height:150px;" src="pics/cupBlue.jpg" alt="Happa Ceramics">
+    </a>    
+    <a href="item.html" class="slide-random">
+        <img style="height:150px;" src="pics/soapHolder2.jpg" alt="Happa Ceramics">
+    </a>    
+    <a href="item.html" class="slide-random">
+        <img style="height:150px;" src="pics/sages.jpg" alt="Happa Ceramics">
+    </a>    
+    <a href="item.html" class="slide-random">
+        <img style="height:150px;" src="pics/bowls.jpg" alt="Happa Ceramics">
+    </a>    <a href="item.html" class="slide-random">
+        <img style="height:150px;" src="pics/bowlTurqouse.jpg" alt="Happa Ceramics">
+    </a>
+    <a href="item.html" class="slide-random">
+        <img style="height:150px;" src="pics/bowls.jpg" alt="Happa Ceramics">
+    </a>
+    <a href="item.html" class="slide-random">
+        <img style="height:150px;" src="pics/soapHolder4.jpg" alt="Happa Ceramics">
+    </a>
+    <a href="item.html" class="slide-random">
+        <img style="height:150px;" src="pics/cupPink.jpg" alt="Happa Ceramics">
+    </a>    
+    <a href="item.html" class="slide-random">
+        <img style="height:150px;" src="pics/cupBlue.jpg" alt="Happa Ceramics">
+    </a>    
+    <a href="item.html" class="slide-random">
+        <img style="height:150px;" src="pics/soapHolder2.jpg" alt="Happa Ceramics">
+    </a>    
+    <a href="item.html" class="slide-random">
+        <img style="height:150px;" src="pics/sages.jpg" alt="Happa Ceramics">
+    </a>    
+    <a href="item.html" class="slide-random">
+        <img style="height:150px;" src="pics/bowls.jpg" alt="Happa Ceramics">
+    </a>    <a href="item.html" class="slide-random">
+        <img style="height:150px;" src="pics/bowlTurqouse.jpg" alt="Happa Ceramics">
+    </a>
+</div>  
+<style>
+#carousel-check-out {
+    width: 100%;
+    height: 150px;
+    background-color: white;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;}
+#carousel-check-out .slide-random {
+    display: inline-block;}    
+</style>    
+<!------- CONTINUE SHOPPING closes -->    
+<br><hr>   
+  
+<p class="text-me-one">Copyright &copy; 2018, Happa Ceramics</p><br>            
+</div><!--CONTENT container closes-->  
+    
+
+    
+<style>
+.remove-btn{
+    border:none;
+    background: none;
+    color: palevioletred;    /*palevioletred -labai grazi spalva*/
+    text-decoration: none;}
+</style>
+    
+    
+<!----------script opens------------>  
+<script type="text/javascript" src="cart-functions.js"></script>    
+<script>
+//dont export: 1.jquery(dependency)  2.page-atrr-related code    
+    
+    displayCart();  //PRIDEJAU, nes kai: refresh -> nerodo cart
+
+    
+    $(".add-to-cart").click(function(){
+        event.preventDefault();
+        var name = $(this).attr("data-name");
+        var img = $(this).attr("data-img");
+        var price = Number($(this).attr("data-price")); // ! not a STRING
+        happaCart.addItemToCart(img, name, price, 1);
+        displayCart();
+    });
+    
+    $("#clear-cart").click(function(event){
+        happaCart.clearCart();
+        displayCart();
+    });                 
+    
+    
+ //   "<tr>" + "<th colspan='5'>" + "Your Cart is Empty." + " " + "Shop: <a href='shop.html'>HERE</a>" + "</th>" + "</tr>" ;
+    
+    
+    function displayCart(){
+        var cartArray = happaCart.listCart();
+        var output = "";
+        for (var i in cartArray) {
+            output += "<tr>"
+            
+                + "<th class='c1 d-none d-sm-block'><a href='#'><img style='width:150px;' src='" + cartArray[i].img + "'></a></th>" 
+                + "<th class='c2'>" + cartArray[i].name + "<br><br>" + "<button class='remove-btn' data-name='" + cartArray[i].name + "'>REMOVE</button>" + "</th>" 
+            
+                + "<th class='c3'>" + cartArray[i].price + "</th>" 
+                + "<th class='c4'>"    //  + cartArray[i].count + " "
+                + "<input class='item-input' type='number' min='1' max='5' data-name='"+cartArray[i].name+"' value='"+cartArray[i].count+"'>" 
+                + "</th>" 
+                
+                + "<th class='c5'>" + cartArray[i].total + "</th>"
+               
+                    /* + "<th>"
+                + "<button class='add-btn' data-name='"
+                +cartArray[i].name+"'>+</button>"
+            
+                + "<button class='subtract-btn' data-name='"
+                +cartArray[i].name+"'>-</button>"
+            
+                
+                    + "</th>"  */
+            
+                + "</tr>"   
+        }
+        $("#show-cart").html(output);
+        $("#count-cart").html( happaCart.countCart() );
+        $("#total-cart").html( happaCart.totalCart() );
+        $("#count-cart2").html( happaCart.countCart() );  //parasyt funkcija, kad nerodytu 0
+
+    }
+    
+    $("#show-cart").on("click", ".remove-btn", function(event){
+        var name = $(this).attr("data-name");
+        happaCart.removeItemFromCartAll(name);
+        displayCart();
+    });
+    
+    $("#show-cart").on("click", ".subtract-btn", function(event){
+        var name = $(this).attr("data-name");
+        happaCart.removeItemFromCart(name);
+        displayCart();
+    });
+    
+    $("#show-cart").on("click", ".add-btn", function(event){
+        var name = $(this).attr("data-name");
+        var img = $(this).attr("data-img");        //PRIDEJAU
+        happaCart.addItemToCart(img, name, 0, 1);
+        displayCart();
+    });    
+    
+    $("#show-cart").on("change", ".item-input", function(event){
+        var name = $(this).attr("data-name");
+        var count = Number($(this).val());    // ! not a STRING
+        happaCart.setCountForItem(name, count);
+        displayCart();
+    });
+    
+    
+  
+
+    
+// MANO Funkcijos    
+$(document).ready(function(){
+    $("html").load(yourCartIsEmptyMessage());
+});
+     
+
+yourCartIsEmptyMessage = function (){
+    var output;
+    if (happaCart.cart == "undefined" || 
+       happaCart.cart == null || 
+       happaCart.cart.length == 0){
+        output = "<br><br><br><br><br><h4 class='marvel align-center'> YOUR SHOPPING BAG IS CURRENTLY EMPTY <br><br> Try browsing <a href='shop.html' class='link-no-deco'><u> HERE </u></a>  </h4><br><br><br><br><br><br><br><br><br><br><br><br>"
+            }
+        $("#emptyCartMessage").html(output);       
+};    
+
+
+</script><!----------script closes------------> 
+    
+
+
+</body>
+</html>

@@ -1,0 +1,213 @@
+body {background-color:inherit;
+      position: relative; 
+  } /* cia del fixed nav bar BUVO*/
+
+/* FONT FAMILY */
+.marvel{font-family: 'Marvel', sans-serif;}
+.text-me-one{font-family: "Text Me One", sans-serif;}
+.allerta{font-family: "Allerta Stencil", sans-serif;}
+.fredericka{font-family: 'Fredericka the Great', cursive;}
+.monofett{font-family: 'Monofett', cursive;}
+
+.test{border: solid 1px black;}
+.test1{border: solid 1px lightgrey;}
+.test2{border: solid 1px yellow;}
+.test3{border: solid 1px green;}
+.border{border: solid 1px grey;}
+.border-dotted{border-top:dotted 4px grey;}
+
+/* separate properties */
+.bg-whitesmoke{background-color: whitesmoke;}
+.align-center{text-align: center;}
+.float-left{float: left;}
+.float-right{float: right;}
+.all-caps{text-transform: uppercase;}
+
+.link-no-deco:link{text-decoration: none; color: black;}
+.link-no-deco:visited{text-decoration: none; color: black;}
+.link-no-deco:hover{text-decoration: none; color: lightpink;}
+.link-no-deco:active{text-decoration: none; color: lightsteelblue;}
+
+.text-no-deco{
+    text-decoration: none;}
+
+/****************************/
+
+/*HEADER*/
+.navbar {
+    padding-top: 20px;
+    border-bottom: 1px solid lightgrey;}
+.nav-menu{
+    height:100px;
+    margin-top: 50px;}
+
+/*MENU BUTTON*/
+#menuButton>.button-bar{}
+#menuButton:hover>.button-bar{
+    background-color: lightpink;}
+#menuButton{
+    width:50px;
+    height:55px;
+    padding: 5px 40px 6px 13px;
+    margin: -30px 0px 10px 1px;
+    border:none;
+    line-height:3px;}
+.button-bar{
+    font-size: 2.4px;
+    padding: 0px 18px 0px 27px;
+    background-color: grey;}
+
+/*SHOPPING CART BUTTON -- dar reik taisyti !!!  */
+#shoppingCartButton{
+    padding: 1px 9px 1px 9px;
+    margin: -10px 1px 1px 1px;
+    color: grey;
+    background-color: whitesmoke;
+    border: none;}
+#shoppingCartButton:hover{
+    color: lightpink;} 
+
+.happa-menu-bruksnys{
+    border-top: 1px solid lightgrey;}
+
+/*MENU ITEMS*/
+.nav-menu-item{    
+    padding-top:30px;
+    padding-bottom:25px;
+    border-bottom: 1px solid lightgrey;
+    background-color:whitesmoke;}
+.nav-menu-item:hover{
+    background-color:ghostwhite;}
+/*MENU: DROPDOWN*/
+.happa-dropdown{
+    width:100%;
+    align-content: center;
+    background-color: whitesmoke;}
+.happa-dropdown-item{
+    height:40px;}
+
+/*ABOUT*/
+#happa-about{
+    text-align: center;
+    font-size: 15px;}
+.rankyte+.tekstas {background-color: lightpink;}
+.rankyte:hover +.tekstas {background-color: lightblue;} 
+
+/*SEND MESSAGE*/
+#happa-message-area{
+    width:100%;
+    padding:25px;
+    background-color: mistyrose;
+    border: 1px solid grey;
+    color: green;}
+.customer-contact{
+    width: 180px;
+    background-color: mistyrose;
+    border: 1px solid grey;
+    color: green;}
+
+/*HAPPA IMAGES: mouseover border*/
+.img-gallery-shop{
+    border: 1px solid white;
+    width: 100%;}
+.img-gallery-shop:hover{
+    border: 1px solid grey;}
+
+
+/*CAROUSEL: Make img fully responsive*/
+.carousel-inner img {
+      width: 100%;
+      height: 100%;}
+.carousel-item{
+border: 1px solid lightgrey;}
+
+/*HAPPA BUTTON*/
+.button-happa{
+    padding:10px;
+    width:auto;
+    border-radius: 10px;
+    background-color: white;
+    color:black;
+    border: 1px solid grey;
+    font-family: 'Marvel', sans-serif;
+    text-transform: uppercase;}
+.button-happa:hover{
+    background-color: #fcf3f5;
+    color: dimgrey;}
+
+/*MESSAGE: ADDED TO BAG*/
+#happa-message{
+    font-family: 'Marvel', sans-serif;
+    text-transform: uppercase;
+    font-size: 17px;
+    width:70%;
+    float:left;
+    padding:30px;}
+
+
+/*CHECK OUT*/
+.shipping-block{
+    padding: 20px; 
+    border: 1px solid lightgrey;
+    background-color: whitesmoke;}
+
+.payment-block{
+    padding: 20px;
+    border: 1px solid lightgrey;
+    background-color: whitesmoke;}
+
+.cart-block{
+    padding: 20px; 
+    margin-bottom: 60px; 
+    border: 1px solid lightgrey;    
+    background-color: whitesmoke;
+    float:right;}
+.galva{
+    text-transform: uppercase;
+    text-align: center;
+    border: 1px solid grey;
+    background-color:#fcf3f5; 
+    margin:-21px;
+    padding:10px;}
+
+
+
+
+/*---------------------------*/
+
+/*RESPONSIVE WEB DESIGN*/
+
+/* xs 
+devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap*/
+
+/* sm */@media (min-width: 576px) {
+.nav-menu-item{border-bottom:none;}
+.menu-item-1{border-right: 1px solid lightgrey;}
+.menu-item-2{border-right: 1px solid lightgrey;}
+.menu-item-3{border-right: 1px solid lightgrey;}
+.happa-dropdown{width:25%;}
+#happa-message-area{width:80%;}
+}
+
+/* md */@media (min-width: 768px) {
+#happa-message-area{width:50%;}
+}
+
+/* lg */@media (min-width: 992px) { 
+}
+
+/* xl */@media (min-width: 1200px) { 
+}
+
+
+
+
+/*---------------------------*/
+/* Sass mixins. Kur juos iterpti kad veiktu?  */
+@include media-breakpoint-up(xs) { ... }
+@include media-breakpoint-up(sm) { ... }
+@include media-breakpoint-up(md) { ... }
+@include media-breakpoint-up(lg) { ... }
+@include media-breakpoint-up(xl) { ... }
+
